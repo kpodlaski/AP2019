@@ -3,10 +3,11 @@
 <body>
 <h2>Hello World!</h2>
 <%
-Connection dCon = DriverManager.getConnection("jdbc:sqlite:C:\\tmp\\workshop_db.db");
+Connection dCon = DriverManager.getConnection
+("jdbc:sqlite:C:\\tmp\\workshop_db.db");
 Statement st = dCon.createStatement();
 String sql = "SELECT * FROM STUDENT";
-
+//STUDENTS WITH ID's higher than 1
 st.execute(sql);
 ResultSet rs = st.getResultSet();
 while(rs.next()){
