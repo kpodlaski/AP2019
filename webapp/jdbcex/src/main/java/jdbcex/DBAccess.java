@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
 public class DBAccess {
     private Connection dCon;
     public DBAccess() throws SQLException {
@@ -29,7 +30,6 @@ public class DBAccess {
             //out.println("<br>");
         }
         return student;
-}
     }
-
 }
+
