@@ -1,0 +1,33 @@
+@startuml
+
+entity STUDENT{
+    ID: int
+    --
+    NAME:text
+    SURNAME: text
+    EMAIL: text
+}
+entity COURSE{
+    ID:int
+    --
+    NAME:text
+    DESCRIPTION:text
+}
+
+entity ENROLMENT{
+
+}
+entity MARK{
+    --
+    MARK : int
+    DATE : text
+}
+
+STUDENT ||-up-|{ "ID_STUDENT" ENROLMENT
+STUDENT ||--|{ "ID_STUDENT" MARK
+COURSE ||-up-|{ "ID_COURSE" ENROLMENT
+COURSE ||--|{ "ID_COURDE" MARK
+
+
+
+@enduml
