@@ -1,9 +1,10 @@
-<%@ page import="java.sql.*" %>
+<%@ page import="java.sql.*, jdbcex.*" %>
 <html>
 <body>
 <h2>Student Page</h2>
 <table>
 <%
+    Class.forName("org.sqlite.JDBC");
     DBAccess db = new DBAccess();
     Student student = db.getStudentWithId(2);
     out.println("<tr><td>");

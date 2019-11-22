@@ -11,7 +11,7 @@ public class DBAccess {
     private Connection dCon;
     public DBAccess() throws SQLException {
         this.dCon = DriverManager.getConnection
-            ("jdbc:sqlite:C:\\tmp\\workshop_db.db");
+            ("jdbc:sqlite:..\\..\\db\\workshop_db.db");
     }
 
     public Student getStudentWithId(int id) throws SQLException{
